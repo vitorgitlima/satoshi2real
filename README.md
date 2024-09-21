@@ -21,3 +21,14 @@ O **satoshi2real** é uma aplicação Go que converte valores de satoshis (a men
    ```bash
 go run main.go
 ```
+## Exemplo de uso
+
+{
+http://localhost:8080/convert?satoshis=1000](http://localhost:8080/convert?satoshis=1000000)
+}
+
+response
+{
+"reais": 3486.4700000000003
+}
+
