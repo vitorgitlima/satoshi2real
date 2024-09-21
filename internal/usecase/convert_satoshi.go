@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"myapp/internal/domain"
-	"myapp/internal/repository"
+	"satoshi2real/internal/domain"
+	"satoshi2real/internal/repository"
 )
 
 // Interactor que conecta o repositório e o domínio

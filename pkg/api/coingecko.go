@@ -8,7 +8,7 @@ import (
 
 // Interface para o client da API do CoinGecko
 
-type CoinGeckoClient interface {
+type CoinGeckoResponse struct {
 	Bitcoin struct {
 		Brl float64 `json:"brl"`
 	} `json:"bitcoin"`
@@ -16,11 +16,10 @@ type CoinGeckoClient interface {
 
 // implementação do repositório usando CoinGecko
 
-type CoinGeckoRepository struct {}
+type CoinGeckoRepository struct{}
 
-// Implementação de método para obter o preço do Bitcoin
-
-fun (r *CoinGeckoRepository) GetBTCPriceInBRL() (float64, error){
+// / Implementação do método GetBTCPrice
+func (r *CoinGeckoRepository) GetBTCPrice() (float64, error) {
 	url := "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=brl"
 	resp, err := http.Get(url)
 
